@@ -5,19 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subject Selection</title>
     <style>
+        /* CSS from the first file */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EEF5FF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Make sure the container covers the whole viewport height */
+        }
+        .container {
+            width: 50%; /* Set width of the container */
+            max-width: 400px; /* Maximum width of the container */
+            background-color: #B4D4FF; /* Pink background color for the container */
+            padding: 20px; /* Add some padding to the container */
+            text-align: center; /* Center align the content */
+        }
+        h1 {
+            color: #333;
+            font-size: 2em; /* Increase font size */
+            margin-bottom: 20px; /* Increase space between heading and buttons */
+        }
         .subject-btn {
             display: block;
-            margin-bottom: 10px;
+            margin: 0 auto 10px;
+            padding: 15px 30px; /* Increase padding */
+            width: 250px; /* Increase button width */
+            font-size: 1.2em; /* Increase font size */
+            background-color: #008DDA;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .subject-btn:hover {
+            background-color: #008DDA;
+        }
+
+        /* CSS from the second file */
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subject-btn {
+            display: block;
+            margin: 0 auto 10px;
+            padding: 10px 20px;
+            width: 200px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .subject-btn:hover {
+            background-color: #0056b3;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <h1>Select a Subject</h1>
-    <form action="/attendance" method="post">
-        <button class="subject-btn" type="submit" name="subject" value="Deep learning">Deep learning</button>
-        <button class="subject-btn" type="submit" name="subject" value="Data mining">Data mining</button>
-        <button class="subject-btn" type="submit" name="subject" value="IOT">IOT</button>
-        <button class="subject-btn" type="submit" name="subject" value="Distributed computing">Distributed computing</button>
-    </form>
+    <div class="container"> <!-- Container for all buttons -->
+        <h1>Select a Subject</h1>
+        <form action="/attendance" method="post">
+            <button class="subject-btn" type="submit" name="subject" value="Deep learning">Deep learning</button>
+            <button class="subject-btn" type="submit" name="subject" value="Data mining">Data mining</button>
+            <button class="subject-btn" type="submit" name="subject" value="IOT">IOT</button>
+            <button class="subject-btn" type="submit" name="subject" value="Distributed computing">Distributed computing</button>
+        </form>
+    </div>
 </body>
 </html>
+
