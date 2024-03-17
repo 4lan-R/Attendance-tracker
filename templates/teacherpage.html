@@ -1,10 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Page</title>
+    <title>Teacher Page</title>
+    <style>
+        /* CSS from the first file */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EEF5FF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Align content in a column */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            min-height: 100vh; /* Ensure the container covers the whole viewport height */
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px; /* Add margin to create space between elements */
+        }
+        table {
+            width: 70%;
+            margin: 10px auto; /* Reduced margin */
+            border-collapse: collapse;
+            background-color: #B4D4FF;
+        }
+        th, td {
+            padding: 6px; /* Reduced padding */
+            text-align: center;
+            border: 1px solid #333;
+        }
+        th {
+            background-color: #008DDA;
+            color: #fff;
+        }
+        td {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome mam, {{ user }}!</h1>
-    <!-- Other content of the student page goes here -->
+    <h1>Welcome, {{ user }}</h1> <!-- Move the welcome message to the top -->
+    <h2>Attendance Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>march1</th>
+                <th>march2</th>
+                <th>march3</th>
+                <th>march4</th>
+                <th>march5</th>
+                <th>march6</th>
+                <th>march7</th>
+                <th>march8</th>
+                <th>march9</th>
+                <th>march10</th>
+                <th>march11</th>
+                <th>march12</th>
+                <th>march13</th>
+                <th>march14</th>
+                <th>march15</th>
+                <th>march16</th>
+                <th>march17</th>
+                <th>march18</th>
+                <th>march19</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record[1] }}</td> 
+                <td>{{ record[2] }}</td> 
+                <td>{{ record[3] }}</td>
+                <td>{{ record[4] }}</td>
+                <td>{{ record[5] }}</td>
+                <td>{{ record[6] }}</td>
+                <td>{{ record[7] }}</td>
+                <td>{{ record[8] }}</td>
+                <td>{{ record[9] }}</td>
+                <td>{{ record[10] }}</td>
+                <td>{{ record[11] }}</td>
+                <td>{{ record[12] }}</td>
+                <td>{{ record[13] }}</td>
+                <td>{{ record[14] }}</td>
+                <td>{{ record[15] }}</td>
+                <td>{{ record[16] }}</td>
+                <td>{{ record[17] }}</td>
+                <td>{{ record[18] }}</td>
+                <td>{{ record[19] }}</td>
+                <td>{{ record[20] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
