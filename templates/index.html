@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance Tracker</title>
+    <title>User Selection</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EEF5FF;
+            height: 100vh; 
+            margin: 0; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        .login-container {
+            width: 45%;
+            margin: 20px;
+            background-color: #B4D4FF;
+            padding: 20px; 
+            border-radius: 10px; 
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="password"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #7469B6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #176B87;
+        }
+    </style>
 </head>
 <body>
-    <div style="float: left; width: 45%;">
+    <div class="login-container">
         <h2>Student Login</h2>
         <form action="/student_track" method="post">
             <label for="student_users">Login as a student:</label>
@@ -17,6 +61,15 @@
                 <option value="Fasil">Fasil</option>
                 <!-- Add more options for students here -->
                 <option value="Navin">Navin</option>
+                <option value="Ashik">Ashik</option>
+                <option value="Rimil">Rimil</option>
+                <option value="Veena">Veena</option>
+                <option value="Joel">Joel</option>
+                <option value="Shamseer">Shamseer</option>
+                <option value="Akshaya">Akshaya</option>
+                <option value="Anujith">Anujith</option>
+                <option value="Shahariyas">Shahariyas</option>
+                <option value="Fazin">Fazin</option>
             </select>
             <br><br>
             <label for="student_password">Password:</label>
@@ -26,17 +79,14 @@
         </form>
     </div>
 
-    <div style="float: right; width: 45%;">
+    <div class="login-container">
         <h2>Teacher Login</h2>
         <form action="/teacher_track" method="post">
             <label for="teacher_users">Login as a teacher:</label>
             <select id="teacher_users" name="teacher_users" required>
                 <option value="">Teachers</option>
-                <option value="Sabira k">sabira k</option>
-                <option value="Vidhya tk">vidhya tk</option>
-                <option value="Faseela">faseela</option>
-                <!-- Add more options for teachers here -->
-                <option value="teacher10">lakshmi sree</option>
+                <option value="Deep_learning">Sabira K</option>
+                <option value="Data_mining">Vidhya TK</option>
             </select>
             <br><br>
             <label for="teacher_password">Password:</label>
@@ -45,7 +95,6 @@
             <input type="submit" value="Teacher Submit">
         </form>
     </div>
-    
-    <div style="clear: both;"></div>
 </body>
 </html>
+
