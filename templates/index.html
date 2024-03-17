@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+</head>
+<body>
+    <div style="float: left; width: 45%;">
+        <h2>Student Login</h2>
+        <form action="/student_track" method="post">
+            <label for="student_users">Login as a student:</label>
+            <select id="student_users" name="student_users" required>
+                <option value="">Students</option>
+                <option value="Alan">Alan</option>
+                <option value="Devika">Devika</option>
+                <option value="Fasil">Fasil</option>
+                <!-- Add more options for students here -->
+                <option value="Navin">Navin</option>
+            </select>
+            <br><br>
+            <label for="student_password">Password:</label>
+            <input type="password" id="student_password" name="student_password" required>
+            <br><br>
+            <input type="submit" value="Student Submit">
+        </form>
+    </div>
+
+    <div style="float: right; width: 45%;">
+        <h2>Teacher Login</h2>
+        <form action="/teacher_track" method="post">
+            <label for="teacher_users">Login as a teacher:</label>
+            <select id="teacher_users" name="teacher_users" required>
+                <option value="">Teachers</option>
+                <option value="Sabira k">sabira k</option>
+                <option value="Vidhya tk">vidhya tk</option>
+                <option value="Faseela">faseela</option>
+                <!-- Add more options for teachers here -->
+                <option value="teacher10">lakshmi sree</option>
+            </select>
+            <br><br>
+            <label for="teacher_password">Password:</label>
+            <input type="password" id="teacher_password" name="teacher_password" required>
+            <br><br>
+            <input type="submit" value="Teacher Submit">
+        </form>
+    </div>
+    
+    <div style="clear: both;"></div>
+</body>
+</html>
