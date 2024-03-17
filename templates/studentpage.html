@@ -2,9 +2,32 @@
 <html>
 <head>
     <title>Student Page</title>
+    <style>
+        /* CSS from the first file */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EEF5FF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Make sure the container covers the whole viewport height */
+        }
+        h1, h3 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            display: block; /* Ensure h2 starts on a new line */
+            clear: both; /* Ensure h2 starts after any floating elements */
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome student, {{ user }}!</h1>
-    <!-- Other content of the student page goes here -->
+    <h2>Your attendance percentage for {{ subject }} is:</h2>
+    <h3>{{ attendance_percentage }}%</h3>
+    
 </body>
 </html>
